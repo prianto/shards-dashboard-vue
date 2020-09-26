@@ -1,0 +1,7 @@
+{
+  "semi": true,
+  "singleQuote": true,
+  "lines-between-class-members": true,
+  "trailingComma": "all",
+  "arrowParens": "always"
+}

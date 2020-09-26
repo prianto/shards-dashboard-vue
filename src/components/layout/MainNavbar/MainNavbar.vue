@@ -21,8 +21,8 @@ export default {
   },
   props: {
     /**
-       * Whether the main navbar should be sticky, or not.
-       */
+     * Whether the main navbar should be sticky, or not.
+     */
     stickyTop: {
       type: Boolean,
       default: true,

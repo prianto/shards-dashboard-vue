@@ -1,6 +1,5 @@
 <template>
   <d-card class="card-small mb-4">
-
     <!-- Card Header -->
     <d-card-header class="border-bottom">
       <h6 class="m-0">{{ title }}</h6>
@@ -12,41 +11,61 @@
           <d-col>
             <d-form>
               <d-form-row>
-
                 <!-- First Name -->
                 <d-col md="6" class="form-group">
                   <label for="feFirstName">First Name</label>
-                  <d-form-input type="text" id="feFirstName" placeholder="First Name" value="Sierra" />
+                  <d-form-input
+                    type="text"
+                    id="feFirstName"
+                    placeholder="First Name"
+                    value="Sierra"
+                  />
                 </d-col>
 
                 <!-- Last Name -->
                 <d-col md="6" class="form-group">
                   <label for="feLastName">Last Name</label>
-                  <d-form-input type="text" id="feLastName" placeholder="Last Name" value="Brooks" />
+                  <d-form-input
+                    type="text"
+                    id="feLastName"
+                    placeholder="Last Name"
+                    value="Brooks"
+                  />
                 </d-col>
-
               </d-form-row>
 
               <d-form-row>
-
                 <!-- Email -->
                 <d-col md="6" class="form-group">
                   <label for="feEmail">Email</label>
-                  <d-form-input type="email" id="feEmail" placeholder="Email Address" value="sierra@example.com" />
+                  <d-form-input
+                    type="email"
+                    id="feEmail"
+                    placeholder="Email Address"
+                    value=""
+                  />
                 </d-col>
 
                 <!-- Password -->
                 <d-col md="6" class="form-group">
                   <label for="fePassword">Password</label>
-                  <d-form-input type="password" id="fePassword" placeholder="Last Name" value="EX@MPL#P@$$w0RD" />
+                  <d-form-input
+                    type="password"
+                    id="fePassword"
+                    placeholder="Last Name"
+                    value=""
+                  />
                 </d-col>
-
               </d-form-row>
 
               <!-- Address -->
               <div class="form-group">
                 <label for="feInputAddress">Address</label>
-                <d-form-input type="text" id="feInputAddress" placeholder="1234 Main St" />
+                <d-form-input
+                  type="text"
+                  id="feInputAddress"
+                  placeholder="1234 Main St"
+                />
               </div>
 
               <d-form-row>
@@ -66,15 +85,13 @@
                 </d-col>
 
                 <!-- Zip Code -->
-                <d-col md="2"  class="form-group">
+                <d-col md="2" class="form-group">
                   <label for="inputZip">Zip</label>
-                  <input type="text" class="form-control" id="inputZip">
+                  <input type="text" class="form-control" id="inputZip" />
                 </d-col>
-
               </d-form-row>
 
               <d-form-row>
-
                 <!-- Description -->
                 <d-col md="12" class="form-group">
                   <label for="feDescription">Description</label>
@@ -82,8 +99,9 @@
                 </d-col>
               </d-form-row>
 
-              <d-button type="submit" class="btn-accent">Update Account</d-button>
-
+              <d-button type="submit" class="btn-accent">
+                Update Account
+              </d-button>
             </d-form>
           </d-col>
         </d-row>

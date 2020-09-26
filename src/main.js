@@ -13,15 +13,17 @@ import router from './router';
 
 // Layouts
 import Default from '@/layouts/Default.vue';
+import OnePage from '@/layouts/OnePage.vue';
 
 ShardsVue.install(Vue);
 
 Vue.component('default-layout', Default);
+Vue.component('onepage-layout', OnePage);
 
 Vue.config.productionTip = false;
 Vue.prototype.$eventHub = new Vue();
 
 new Vue({
   router,
-  render: h => h(App),
+  render: (h) => h(App),
 }).$mount('#app');

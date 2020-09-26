@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
+import Index from './views/Index.vue';
+import Login from './views/Login.vue';
 import PersonalBlog from './views/PersonalBlog.vue';
 import UserProfileLite from './views/UserProfileLite.vue';
 import AddNewPost from './views/AddNewPost.vue';
@@ -22,6 +24,23 @@ export default new Router({
   routes: [
     {
       path: '/',
+      name: 'index',
+      component: Index,
+      meta: {
+        layout: 'onepage',
+      },
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: Login,
+      meta: {
+        layout: 'onepage',
+      },
+    },
+    {
+      path: '/home',
+      name: 'home',
       redirect: '/blog-overview',
     },
     {
@@ -58,7 +77,8 @@ export default new Router({
       path: '/blog-posts',
       name: 'blog-posts',
       component: BlogPosts,
-    }, {
+    },
+    {
       path: '*',
       redirect: '/errors',
     },

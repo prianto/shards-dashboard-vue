@@ -1,18 +1,42 @@
 <template>
-    <d-card :class="['stats-small', computedVariationClass, 'card', 'card-small']">
-        <d-card-body :class="[computedBodyClass]">
-            <div :class="['d-flex', computedInnerWrapperClass]">
-                <div :class="['stats-small__data', computedDataFieldClass]">
-                    <span :class="['stats-small__label', 'text-uppercase', computedLabelClass]">{{ label }}</span>
-                    <h6 :class="['stats-small__value', 'count', computedValueClass]">{{ value }}</h6>
-                </div>
-                <div :class="['stats-small__data', computedInnerDataFieldClass]">
-                    <span :class="['stats-small__percentage', `stats-small__percentage--${computedPercentageModifier}`]">{{ percentage }}</span>
-                </div>
-            </div>
-            <canvas :height="computedCanvasHeight" ref="canvas" :class="[computedChartId]"></canvas>
-        </d-card-body>
-    </d-card>
+  <d-card
+    :class="['stats-small', computedVariationClass, 'card', 'card-small']"
+  >
+    <d-card-body :class="[computedBodyClass]">
+      <div :class="['d-flex', computedInnerWrapperClass]">
+        <div :class="['stats-small__data', computedDataFieldClass]">
+          <span
+            :class="[
+              'stats-small__label',
+              'text-uppercase',
+              computedLabelClass,
+            ]"
+          >
+            {{ label }}
+          </span>
+          <h6 :class="['stats-small__value', 'count', computedValueClass]">
+            {{ value }}
+          </h6>
+        </div>
+        <div :class="['stats-small__data', computedInnerDataFieldClass]">
+          <span
+            :class="[
+              'stats-small__percentage',
+              `stats-small__percentage--${computedPercentageModifier}`,
+            ]"
+          >
+            {{ percentage }}
+          </span>
+        </div>
+      </div>
+      <canvas
+        :height="computedCanvasHeight"
+        ref="canvas"
+        :class="[computedChartId]"
+      >
+      </canvas>
+    </d-card-body>
+  </d-card>
 </template>
 
 <script>
@@ -178,23 +202,27 @@ export default {
           },
         },
         scales: {
-          xAxes: [{
-            gridLines: false,
-            ticks: {
-              display: false,
+          xAxes: [
+            {
+              gridLines: false,
+              ticks: {
+                display: false,
+              },
             },
-          }],
-          yAxes: [{
-            gridLines: false,
-            scaleLabel: false,
-            ticks: {
-              display: false,
-              isplay: false,
-              // Avoid getting the graph line cut of at the top of the canvas.
-              // Chart.js bug link: https://github.com/chartjs/Chart.js/issues/4790
-              suggestedMax: Math.max(...this.chartData[0].data) + 1,
+          ],
+          yAxes: [
+            {
+              gridLines: false,
+              scaleLabel: false,
+              ticks: {
+                display: false,
+                isplay: false,
+                // Avoid getting the graph line cut of at the top of the canvas.
+                // Chart.js bug link: https://github.com/chartjs/Chart.js/issues/4790
+                suggestedMax: Math.max(...this.chartData[0].data) + 1,
+              },
             },
-          }],
+          ],
         },
       },
       ...this.chartOptions,
@@ -204,7 +232,9 @@ export default {
       ...{
         type: 'line',
         data: {
-          ...{ labels: ['Label 1', 'Label 2', 'Label 3', 'Label 4', 'Label 5'] },
+          ...{
+            labels: ['Label 1', 'Label 2', 'Label 3', 'Label 4', 'Label 5'],
+          },
           ...{
             datasets: this.chartData,
           },
