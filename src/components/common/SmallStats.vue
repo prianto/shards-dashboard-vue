@@ -216,7 +216,6 @@ export default {
               scaleLabel: false,
               ticks: {
                 display: false,
-                isplay: false,
                 // Avoid getting the graph line cut of at the top of the canvas.
                 // Chart.js bug link: https://github.com/chartjs/Chart.js/issues/4790
                 suggestedMax: Math.max(...this.chartData[0].data) + 1,
